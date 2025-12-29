@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Guidelines - ForkArt</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤝</text></svg>">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            line-height: 1.7; 
+            color: #333; 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 20px 20px 50px;
+            background: #f9f9f9;
+        }
+        header { 
+            text-align: center; 
+            margin: 40px 0 50px; 
+            padding-bottom: 20px;
+            border-bottom: 2px solid #6C63FF;
+        }
+        h1 { color: #6C63FF; font-size: 2.5em; margin-bottom: 10px; }
+        .last-updated { color: #666; font-size: 0.95em; margin-bottom: 30px; font-style: italic; }
+        .update-date { background: #fff8e1; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+        
+        section { 
+            background: white; 
+            padding: 30px; 
+            margin: 25px 0; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid #6C63FF;
+        }
+        h2 { 
+            color: #6C63FF; 
+            margin-bottom: 20px; 
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2::before {
+            content: counter(section) ".";
+            counter-increment: section;
+            background: #6C63FF;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            flex-shrink: 0;
+        }
+        h3 { color: #5a54d6; margin: 20px 0 10px; font-size: 1.2em; }
+        p { margin-bottom: 15px; }
+        ul { margin-left: 25px; margin-bottom: 20px; }
+        li { margin-bottom: 8px; }
+        
+        .important-box {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box {
+            background: #ffeaea;
+            border-left: 4px solid #ff5252;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .community-box {
+            background: linear-gradient(135deg, #6C63FF, #8A84FF);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .community-box a { 
+            color: white; 
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #6C63FF;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border: 2px solid #6C63FF;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .back-link:hover {
+            background: #6C63FF;
+            color: white;
+        }
+        
+        footer { 
+            text-align: center; 
+            margin-top: 50px; 
+            color: #777; 
+            font-size: 0.9em;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        body {
+            counter-reset: section;
+        }
+        
+        .rules-list {
+            background: #f0f4ff;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border: 1px dashed #6C63FF;
+        }
+        
+        .do-list, .dont-list {
+            columns: 2;
+            column-gap: 40px;
+        }
+        
+        .do-list li::before {
+            content: "✅ ";
+        }
+        
+        .dont-list li::before {
+            content: "❌ ";
+        }
+        
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            section { padding: 20px; }
+            h1 { font-size: 2em; }
+            .do-list, .dont-list { columns: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🤝 Community Guidelines</h1>
+        <p class="last-updated">Last updated: <span class="update-date">December 28, 2024</span></p>
+        <a href="/forkart-website/index.html" class="back-link">← Back to ForkArt Home</a>
+    </header>
+
+    <section>
+        <h2>Our Community</h2>
+        <p>ForkArt exists to support creativity, experimentation, and respectful remix culture. We want artists to feel safe sharing their work and engaging with others.</p>
+    </section>
+
+    <section>
+        <h2>Be Respectful</h2>
+        <div class="rules-list">
+            <ul class="do-list">
+                <li>Treat other users with kindness and respect</li>
+                <li>Critique art, not people</li>
+                <li>Celebrate diverse styles and perspectives</li>
+                <li>Give credit when inspired by others</li>
+            </ul>
+        </div>
+        <div class="warning-box">
+            <p><strong>Not Allowed:</strong></p>
+            <ul class="dont-list">
+                <li>Harassment, hate speech, or abusive behavior</li>
+                <li>Discrimination based on identity</li>
+                <li>Personal attacks or bullying</li>
+                <li>Threats or intimidation</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Share Responsibly</h2>
+        <p>You may only upload content that:</p>
+        <ul>
+            <li>You created yourself, or</li>
+            <li>You have the right or permission to share</li>
+        </ul>
+        
+        <div class="warning-box">
+            <h3>Do Not Upload:</h3>
+            <ul class="dont-list">
+                <li>Content you do not own or have rights to</li>
+                <li>Explicit sexual content</li>
+                <li>Content that promotes violence or harm</li>
+                <li>Content intended to harass or exploit others</li>
+                <li>Spam or repetitive content</li>
+                <li>Misinformation or deceptive content</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Remix Culture</h2>
+        <p>ForkArt supports remixing and creative transformation where allowed by the platform.</p>
+        
+        <div class="important-box">
+            <p><strong>Remix Principles:</strong></p>
+            <ul>
+                <li>Remixing does not remove original ownership</li>
+                <li>Credit original artists where appropriate</li>
+                <li>Respect artists' boundaries and intentions</li>
+                <li>Transformative works should add new creative value</li>
+                <li>Check if the original work allows remixing</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Reporting & Moderation</h2>
+        <p>If you see content that violates these guidelines:</p>
+        <ul>
+            <li>Report it through the app's reporting feature, or</li>
+            <li>Email us at <a href="mailto:forkartapp@gmail.com">forkartapp@gmail.com</a></li>
+        </ul>
+        
+        <p>We review reports and may:</p>
+        <ul>
+            <li>Remove violating content</li>
+            <li>Restrict or suspend accounts</li>
+            <li>Provide warnings for minor violations</li>
+            <li>Block repeat offenders</li>
+        </ul>
+        
+        <div class="important-box">
+            <p><strong>Note:</strong> We aim to review reports within 48 hours. Please be patient as we're a small team building this platform with care.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Our Responsibility</h2>
+        <p>ForkArt is a small, evolving platform built by artists for artists. While we strive to keep the community safe, we rely on users to:</p>
+        <ul>
+            <li>Report issues and violations</li>
+            <li>Help us improve these guidelines</li>
+            <li>Model respectful behavior</li>
+            <li>Share feedback on our moderation</li>
+        </ul>
+        <p>These guidelines will evolve as our community grows. We welcome your input on making ForkArt a better space for creativity.</p>
+    </section>
+
+    <div class="community-box">
+        <h2 style="color: white; border: none; margin-bottom: 15px;">Help Build Our Community</h2>
+        <p>Have suggestions for improving these guidelines or our community?</p>
+        <p style="font-size: 1.3em; margin: 15px 0;">
+            📧 <a href="mailto:forkartapp@gmail.com">forkartapp@gmail.com</a>
+        </p>
+        <p>We read every message and appreciate your help!</p>
+    </div>
+
+    <footer>
+        <p>© 2024 ForkArt. All rights reserved.</p>
+        <p>These Community Guidelines are part of our <a href="terms.html">Terms of Service</a>.</p>
+        <p style="margin-top: 15px;">
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="guidelines.html">Community Guidelines</a> | 
+            <a href="copyright.html">Copyright & DMCA</a>
+        </p>
+    </footer>
+
+    <script>
+        // Update the date automatically
+        document.addEventListener('DOMContentLoaded', function() {
+            const updateDate = document.querySelector('.update-date');
+            if (updateDate && updateDate.textContent.includes('December 28, 2024')) {
+                // Keep the hardcoded date since it's already correct
+                // Or uncomment below to always show current date:
+                // const today = new Date();
+                // const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                // updateDate.textContent = today.toLocaleDateString('en-US', options);
+            }
+        });
+    </script>
+</body>
+</html>
