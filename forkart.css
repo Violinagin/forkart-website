@@ -1,0 +1,169 @@
+/* ============================================================
+   ForkArt — shared content-page stylesheet
+   Derived from index.html so every page shares one identity:
+   serif display, hairline ink rules, sharp 2px corners,
+   yellow + deep-purple accents, faint fork-map background.
+   Drop this <style> block into terms / privacy / guidelines /
+   copyright / roadmap. No per-page CSS needed.
+   ============================================================ */
+
+:root{
+  --yellow:#eab308; --yellow-rich:#ca8a04; --yellow-light:#fef9c3; --yellow-deep:#854d0e;
+  --purple-100:#f3e8ff; --purple-300:#d8b4fe; --purple-500:#a855f7;
+  --purple-700:#7c3aed; --purple-900:#581c87;
+  --warn:#ef4444; --warn-bg:#fef2f2;
+  --ink:#0f172a; --slate:#475569; --line:#e2e8f0; --paper:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  color:var(--ink);
+  line-height:1.7;
+  background:var(--paper);
+  counter-reset:section;
+  position:relative;   /* establishes the stacking context the layers live in */
+}
+
+.serif{font-family:Georgia,'Times New Roman',serif;}
+
+/* ---- fixed fork-map background (shared with index) ---- */
+.forkmap{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.forkmap svg{width:100%;height:100%;}
+
+/* every direct child of body except the map sits above it */
+body > *:not(.forkmap){position:relative;z-index:1;}
+
+/* ---- layout shell ---- */
+.wrap{max-width:860px;margin:0 auto;padding:0 32px;}
+
+/* translucent surfaces let the fork-map show through faintly,
+   exactly like the index sections */
+nav,header,section,.contact-box,footer{background:rgba(255,255,255,0.78);}
+
+/* ---- top nav (mirrors index) ---- */
+nav{border-bottom:1px solid var(--ink);}
+nav .row{max-width:860px;margin:0 auto;padding:22px 32px;display:flex;justify-content:space-between;align-items:center;}
+nav .mark{font-family:Georgia,serif;font-weight:400;font-size:22px;letter-spacing:-0.02em;text-decoration:none;color:var(--ink);}
+nav .mark .art{color:var(--yellow);position:relative;}
+nav .mark .art::after{content:"";position:absolute;left:1px;right:1px;bottom:3px;height:7px;background:var(--purple-300);z-index:-1;opacity:.55;}
+nav .back{font-size:14px;color:var(--slate);text-decoration:none;border:1px solid var(--ink);padding:9px 18px;border-radius:2px;font-weight:600;transition:background .25s ease,color .25s ease,border-color .25s ease;}
+nav .back:hover{background:var(--yellow);border-color:var(--yellow-rich);color:var(--yellow-deep);}
+
+/* ---- page header ---- */
+header{text-align:center;padding:72px 32px 56px;border-bottom:1px solid var(--line);margin-bottom:8px;}
+header h1{font-size:clamp(36px,6vw,60px);font-weight:400;letter-spacing:-0.03em;line-height:1.05;}
+header .eyebrow{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--purple-700);font-weight:700;margin-bottom:14px;}
+.last-updated{color:var(--slate);font-size:0.95em;margin-top:18px;}
+.update-date{background:var(--yellow-light);padding:2px 8px;font-weight:700;color:var(--yellow-deep);}
+
+/* ---- content sections: hairline framed, square corners ---- */
+section{
+  padding:36px 40px;
+  margin:0 auto;
+  max-width:860px;
+  border-bottom:1px solid var(--line);
+}
+section:first-of-type{border-top:1px solid var(--line);}
+
+/* numbered sections use a square index tile, not a circle.
+   Add class="numbered" on <body> wrappers that want counters,
+   or just use .num sections individually. Here every <h2> in a
+   .doc body increments — see .doc h2 below. */
+h2{
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-size:1.55em;
+  letter-spacing:-0.01em;
+  margin-bottom:20px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.doc h2::before{
+  content:counter(section);
+  counter-increment:section;
+  background:var(--ink);
+  color:var(--yellow);
+  width:34px;height:34px;
+  border-radius:2px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:0.62em;font-weight:700;
+  flex-shrink:0;
+}
+
+h3{font-size:1.18em;font-weight:600;color:var(--ink);margin:22px 0 10px;}
+p{margin-bottom:15px;color:var(--slate);}
+section > p:last-child,.box p:last-child{margin-bottom:0;}
+ul{margin:0 0 18px 22px;color:var(--slate);}
+li{margin-bottom:8px;}
+a{color:var(--purple-700);}
+a:hover{color:var(--purple-900);}
+strong{color:var(--ink);}
+
+/* ---- callout boxes: left ink rule + tinted ground, square ---- */
+.box{padding:20px 22px;margin:20px 0;border-radius:2px;border:1px solid var(--line);border-left:3px solid var(--ink);}
+.box p{color:var(--ink);}
+
+.important-box{background:var(--yellow-light);border-left-color:var(--yellow-rich);}
+.policy-box{background:var(--purple-100);border-left-color:var(--purple-700);}
+.warning-box{background:var(--warn-bg);border-left-color:var(--warn);}
+.highlight-box{background:var(--purple-100);border-left-color:var(--purple-700);}
+.highlight-box p{margin-bottom:12px;}
+
+/* dashed-frame boxes (license / rules / legal) */
+.license-note,.rules-list,.legal-box{background:#faf7ff;border:1px dashed var(--purple-500);border-radius:2px;padding:22px;margin:22px 0;}
+.license-note p,.rules-list p,.legal-box p{color:var(--ink);}
+
+/* copyright: single-rule notice + numbered requirement list */
+.notice-item{background:rgba(255,255,255,0.6);border-left:3px solid var(--ink);padding:15px 18px;margin:15px 0;border-radius:2px;}
+.requirement-list{background:#faf7ff;border:1px solid var(--line);border-radius:2px;padding:22px 22px 22px 44px;margin:20px 0;}
+.requirement-list li{margin-bottom:12px;color:var(--ink);}
+.requirement-list ol,.requirement-list ul{margin-left:0;}
+
+.prohibited-list{columns:2;column-gap:40px;}
+.prohibited-list li{break-inside:avoid;}
+
+/* guidelines: do / don't columns with marks */
+.do-list,.dont-list{columns:2;column-gap:40px;list-style:none;margin-left:0;}
+.do-list li,.dont-list li{break-inside:avoid;padding-left:2px;}
+.do-list li::before{content:"✓ ";color:#16a34a;font-weight:700;}
+.dont-list li::before{content:"✕ ";color:var(--warn);font-weight:700;}
+
+/* ---- contact band: deep-purple, mirrors index lineage card ---- */
+.contact-box,.community-box,.dmca-box{
+  background:var(--purple-900);
+  color:#fff;
+  padding:40px;
+  margin:36px auto;
+  max-width:860px;
+  text-align:center;
+  border-radius:2px;
+}
+.contact-box h2,.community-box h2,.dmca-box h2,
+.contact-box h3,.community-box h3,.dmca-box h3{color:#fff;justify-content:center;}
+.contact-box p,.community-box p,.dmca-box p{color:var(--purple-100);}
+.contact-box a,.community-box a,.dmca-box a{color:var(--yellow);text-decoration:none;font-weight:700;}
+.contact-box a:hover,.community-box a:hover,.dmca-box a:hover{text-decoration:underline;}
+
+/* ---- back link (bottom) ---- */
+.back-link{
+  display:inline-block;margin:8px 0;
+  color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;
+  padding:13px 26px;border:1px solid var(--ink);border-radius:2px;
+  transition:background .25s ease,color .25s ease,border-color .25s ease;
+}
+.back-link:hover{background:var(--yellow);border-color:var(--yellow-rich);color:var(--yellow-deep);box-shadow:0 0 0 4px var(--yellow-light);}
+.foot-actions{text-align:center;padding:28px 32px;}
+
+footer{border-top:1px solid var(--ink);padding:40px 32px;font-size:13px;color:var(--slate);text-align:center;}
+footer p{color:var(--slate);margin-bottom:6px;}
+
+@media(max-width:768px){
+  .wrap,nav .row,section,header{padding-left:20px;padding-right:20px;}
+  section{padding-top:28px;padding-bottom:28px;}
+  .prohibited-list,.do-list,.dont-list{columns:1;}
+  .contact-box,.community-box,.dmca-box{padding:32px 20px;}
+}
