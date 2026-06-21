@@ -1,335 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - ForkArt</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
-            line-height: 1.7; 
-            color: #333; 
-            max-width: 900px; 
-            margin: 0 auto; 
-            padding: 20px 20px 50px;
-            background: #f9f9f9;
-        }
-        header { 
-            text-align: center; 
-            margin: 40px 0 50px; 
-            padding-bottom: 20px;
-            border-bottom: 2px solid #6C63FF;
-        }
-        h1 { color: #6C63FF; font-size: 2.5em; margin-bottom: 10px; }
-        .last-updated { color: #666; font-size: 0.95em; margin-bottom: 30px; font-style: italic; }
-        .update-date { background: #fff8e1; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
-        
-        section { 
-            background: white; 
-            padding: 30px; 
-            margin: 25px 0; 
-            border-radius: 12px; 
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            border-left: 4px solid #6C63FF;
-        }
-        h2 { 
-            color: #6C63FF; 
-            margin-bottom: 20px; 
-            font-size: 1.5em;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        h2::before {
-            content: counter(section) ".";
-            counter-increment: section;
-            background: #6C63FF;
-            color: white;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8em;
-            flex-shrink: 0;
-        }
-        h3 { color: #5a54d6; margin: 20px 0 10px; font-size: 1.2em; }
-        p { margin-bottom: 15px; }
-        ul { margin-left: 25px; margin-bottom: 20px; }
-        li { margin-bottom: 8px; }
-        
-        .important-box {
-            background: #fff8e1;
-            border-left: 4px solid #ffc107;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-        
-        .warning-box {
-            background: #ffeaea;
-            border-left: 4px solid #ff5252;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-
-        .policy-box {
-            background: #f3f0ff;
-            border-left: 4px solid #6C63FF;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-        }
-        
-        .contact-box {
-            background: linear-gradient(135deg, #6C63FF, #8A84FF);
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin: 30px 0;
-            text-align: center;
-        }
-        .contact-box a { 
-            color: white; 
-            text-decoration: underline;
-            font-weight: bold;
-        }
-        
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #6C63FF;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 10px 20px;
-            border: 2px solid #6C63FF;
-            border-radius: 8px;
-            transition: all 0.2s;
-        }
-        .back-link:hover {
-            background: #6C63FF;
-            color: white;
-        }
-        
-        footer { 
-            text-align: center; 
-            margin-top: 50px; 
-            color: #777; 
-            font-size: 0.9em;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        
-        body {
-            counter-reset: section;
-        }
-        
-        .license-note {
-            background: #f0f4ff;
-            padding: 25px;
-            border-radius: 10px;
-            margin: 25px 0;
-            border: 1px dashed #6C63FF;
-        }
-        
-        .prohibited-list {
-            columns: 2;
-            column-gap: 40px;
-        }
-        
-        @media (max-width: 768px) {
-            body { padding: 15px; }
-            section { padding: 20px; }
-            h1 { font-size: 2em; }
-            .prohibited-list { columns: 1; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service - ForkArt</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
+<link rel="stylesheet" href="/forkart.css">
 </head>
 <body>
-    <header>
-        <h1>📜 Terms of Service</h1>
-        <p class="last-updated">Last updated: <span class="update-date">June 20, 2026</span></p>
-        <a href="/index.html" class="back-link">← Back to ForkArt Home</a>
-    </header>
+<div class="forkmap" aria-hidden="true"><svg viewBox="0 0 1440 1600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><polyline points="-40,180 220,180 360,320 360,560 520,720 820,720 980,560 980,300" fill="none" stroke="#d99e06" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.188"/><polyline points="180,-40 180,260 340,420 640,420 800,580 800,920 1040,1160" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/><polyline points="1480,360 1180,360 1020,520 1020,760 860,920 560,920 440,1040" fill="none" stroke="#d99e06" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.188"/><polyline points="1480,820 1240,820 1100,960 1100,1240 940,1400" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/><polyline points="60,1640 60,1280 300,1040 620,1040 760,1180 760,1420" fill="none" stroke="#d99e06" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.188"/><polyline points="-40,640 260,640 420,800 420,1120 620,1320" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/><polyline points="1480,1280 1180,1280 1040,1140 740,1140 600,1280" fill="none" stroke="#d99e06" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.188"/><polyline points="900,-40 900,180 1080,360 1380,360" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/><polyline points="-40,980 180,980 340,1140 640,1140 780,1000" fill="none" stroke="#d99e06" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.188"/><polyline points="520,-40 520,160 360,320 120,320" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/><polyline points="1200,1640 1200,1360 1360,1200 1480,1200" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/><polyline points="1340,-40 1340,200 1180,360" fill="none" stroke="#d99e06" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.188"/><polyline points="700,1640 700,1380 900,1180 1180,1180" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/><polyline points="-40,1380 220,1380 380,1540" fill="none" stroke="#d99e06" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.188"/><polyline points="1040,1160 1240,1160 1380,1300" fill="none" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/><polyline points="640,420 640,160 820,-20" fill="none" stroke="#d99e06" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.188"/><circle cx="220" cy="180" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="220" cy="180" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="360" cy="560" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="360" cy="560" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="820" cy="720" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="820" cy="720" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="980" cy="560" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="980" cy="560" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="180" cy="260" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="180" cy="260" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="640" cy="420" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="640" cy="420" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="800" cy="920" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="800" cy="920" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="1180" cy="360" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="1180" cy="360" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="1020" cy="760" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="1020" cy="760" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="560" cy="920" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="560" cy="920" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="1240" cy="820" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="1240" cy="820" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="1100" cy="1240" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="1100" cy="1240" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="60" cy="1280" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="60" cy="1280" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="300" cy="1040" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="300" cy="1040" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="760" cy="1180" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="760" cy="1180" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="260" cy="640" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="260" cy="640" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="420" cy="1120" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="420" cy="1120" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="1180" cy="1280" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="1180" cy="1280" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="1040" cy="1140" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="1040" cy="1140" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="740" cy="1140" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="740" cy="1140" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="900" cy="180" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="900" cy="180" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="1080" cy="360" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="1080" cy="360" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="180" cy="980" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="180" cy="980" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="340" cy="1140" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="340" cy="1140" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="780" cy="1000" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="780" cy="1000" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="520" cy="160" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="520" cy="160" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="360" cy="320" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="360" cy="320" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="1200" cy="1360" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="1200" cy="1360" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="1360" cy="1200" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="1360" cy="1200" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="1340" cy="200" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="1340" cy="200" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="700" cy="1380" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="700" cy="1380" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="900" cy="1180" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="900" cy="1180" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="220" cy="1380" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="220" cy="1380" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="380" cy="1540" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="380" cy="1540" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="1040" cy="1160" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="1040" cy="1160" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="1240" cy="1160" r="7" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.22"/><circle cx="1240" cy="1160" r="2.4" fill="#a855f7" opacity="0.22"/><circle cx="640" cy="420" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="640" cy="420" r="2.4" fill="#d99e06" opacity="0.264"/><circle cx="640" cy="160" r="7" fill="none" stroke="#d99e06" stroke-width="3" opacity="0.264"/><circle cx="640" cy="160" r="2.4" fill="#d99e06" opacity="0.264"/></svg></div>
+<nav>
+  <div class="row">
+    <a href="/index.html" class="mark serif">Fork<span class="art">Art</span></a>
+    <a href="/index.html" class="back">&larr; Home</a>
+  </div>
+</nav>
 
-    <section>
-        <h2>Acceptance of Terms</h2>
-        <p>By downloading, accessing, or using ForkArt ("the App"), you agree to these Terms of Service ("Terms"). If you do not agree, do not use the App.</p>
-    </section>
+<header>
+  <p class="eyebrow">Legal</p>
+  <h1 class="serif">Terms of Service</h1>
+  <p class="last-updated">Last updated: <span class="update-date">June 20, 2026</span></p>
+</header>
 
-    <section>
-        <h2>Eligibility</h2>
-        <p>You must be at least 13 years old (or the minimum age required in your country) to use ForkArt. By using the App, you represent that you meet this requirement.</p>
-    </section>
+<div class="doc">
 
-    <section>
-        <h2>Accounts</h2>
-        <p>You may browse the public gallery without creating an account.</p>
-        <p>An account is required to upload artwork, use social features, or make any payments on the platform.</p>
-        <p class="important-box"><strong>Important:</strong> You are responsible for maintaining the security of your account and any activity that occurs under it.</p>
-    </section>
+<section>
+  <h2>Acceptance of Terms</h2>
+  <p>By downloading, accessing, or using ForkArt ("the App"), you agree to these Terms of Service ("Terms"). If you do not agree, do not use the App.</p>
+</section>
 
-    <section>
-        <h2>User Content</h2>
-        
-        <h3>A. Ownership</h3>
-        <p>You retain ownership of any artwork or creative content you upload to ForkArt.</p>
-        
-        <h3>B. License to ForkArt</h3>
-        <div class="license-note">
-            <p><strong>By uploading content, you grant ForkArt a non-exclusive, worldwide, royalty-free license to:</strong></p>
-            <ul>
-                <li>Host, display, reproduce, and distribute your content</li>
-                <li>Solely for operating and promoting the App</li>
-                <li>This license ends when you delete your content or account</li>
-            </ul>
-        </div>
-        
-        <h3>C. Responsibility</h3>
-        <p>You are responsible for the content you upload and must ensure that:</p>
-        <ul>
-            <li>You have the rights to share it</li>
-            <li>It does not violate laws, copyrights, or third-party rights</li>
-            <li>It does not contain harmful or abusive material</li>
-        </ul>
-    </section>
+<section>
+  <h2>Eligibility</h2>
+  <p>You must be at least 13 years old (or the minimum age required in your country) to use ForkArt. By using the App, you represent that you meet this requirement.</p>
+</section>
 
-    <section>
-        <h2>Remix & Social Features</h2>
-        <p>ForkArt allows users to interact with and remix content where permitted by the App's functionality. By participating, you acknowledge that:</p>
-        <ul>
-            <li>Other users may view, comment on, or interact with your content</li>
-            <li>Remixing does not transfer ownership unless explicitly stated</li>
-            <li>The original artist receives attribution for remixed works</li>
-        </ul>
-    </section>
+<section>
+  <h2>Accounts</h2>
+  <p>You may browse the public gallery without creating an account.</p>
+  <p>An account is required to upload artwork, use social features, or make any payments on the platform.</p>
+  <div class="box important-box"><p><strong>Important:</strong> You are responsible for maintaining the security of your account and any activity that occurs under it.</p></div>
+</section>
 
-    <section>
-        <h2>Prohibited Conduct</h2>
-        <p>You agree not to:</p>
-        <div class="warning-box">
-            <ul class="prohibited-list">
-                <li>Upload content that is illegal, abusive, or infringing</li>
-                <li>Attempt to disrupt or exploit the App</li>
-                <li>Harass or harm other users</li>
-                <li>Reverse-engineer or misuse the App</li>
-                <li>Impersonate others or provide false information</li>
-                <li>Upload viruses or malicious code</li>
-                <li>Violate others' privacy or intellectual property</li>
-                <li>Use automated systems to access the App</li>
-                <li>Self-tip or manipulate the tip or payout system</li>
-                <li>Create multiple accounts to artificially generate earnings</li>
-            </ul>
-        </div>
-        <p>We reserve the right to remove content or suspend accounts that violate these Terms.</p>
-    </section>
+<section>
+  <h2>User Content</h2>
+  <h3>A. Ownership</h3>
+  <p>You retain ownership of any artwork or creative content you upload to ForkArt.</p>
+  <h3>B. License to ForkArt</h3>
+  <div class="license-note">
+    <p><strong>By uploading content, you grant ForkArt a non-exclusive, worldwide, royalty-free license to:</strong></p>
+    <ul>
+      <li>Host, display, reproduce, and distribute your content</li>
+      <li>Solely for operating and promoting the App</li>
+      <li>This license ends when you delete your content or account</li>
+    </ul>
+  </div>
+  <h3>C. Responsibility</h3>
+  <p>You are responsible for the content you upload and must ensure that:</p>
+  <ul>
+    <li>You have the rights to share it</li>
+    <li>It does not violate laws, copyrights, or third-party rights</li>
+    <li>It does not contain harmful or abusive material</li>
+  </ul>
+</section>
 
-    <section>
-        <h2>Prohibited Content & Monetization Policy</h2>
-        <p>ForkArt is a platform for original creative work. The following categories of content are strictly prohibited on ForkArt, and any attempt to upload, share, or monetize them — including through tipping, subscriptions, or any other payment feature — will result in immediate account suspension and forfeiture of pending earnings.</p>
+<section>
+  <h2>Remix &amp; Social Features</h2>
+  <p>ForkArt allows users to interact with and remix content where permitted by the App's functionality. By participating, you acknowledge that:</p>
+  <ul>
+    <li>Other users may view, comment on, or interact with your content</li>
+    <li>Remixing does not transfer ownership unless explicitly stated</li>
+    <li>The original artist receives attribution for remixed works</li>
+  </ul>
+</section>
 
-        <h3>A. Adult & Sexual Content</h3>
-        <div class="policy-box">
-            <p>Pornographic, sexually explicit, or adult content of any kind is not permitted on ForkArt. The use of any platform monetization feature — including tips, fan subscriptions, or payouts — in connection with adult content or adult services is strictly prohibited.</p>
-        </div>
+<section>
+  <h2>Prohibited Conduct</h2>
+  <p>You agree not to:</p>
+  <div class="box warning-box">
+    <ul class="prohibited-list">
+      <li>Upload content that is illegal, abusive, or infringing</li>
+      <li>Attempt to disrupt or exploit the App</li>
+      <li>Harass or harm other users</li>
+      <li>Reverse-engineer or misuse the App</li>
+      <li>Impersonate others or provide false information</li>
+      <li>Upload viruses or malicious code</li>
+      <li>Violate others' privacy or intellectual property</li>
+      <li>Use automated systems to access the App</li>
+      <li>Self-tip or manipulate the tip or payout system</li>
+      <li>Create multiple accounts to artificially generate earnings</li>
+    </ul>
+  </div>
+  <p>We reserve the right to remove content or suspend accounts that violate these Terms.</p>
+</section>
 
-        <h3>B. Copyright & Intellectual Property Infringement</h3>
-        <div class="policy-box">
-            <p>Uploading, distributing, or monetizing content that infringes the copyrights, trademarks, or other intellectual property rights of any third party is prohibited. This includes unauthorized use of licensed artwork, music, characters, brand assets, or any content you do not have the right to share or commercialize.</p>
-        </div>
+<section>
+  <h2>Prohibited Content &amp; Monetization Policy</h2>
+  <p>ForkArt is a platform for original creative work. The following categories of content are strictly prohibited on ForkArt, and any attempt to upload, share, or monetize them &mdash; including through tipping, subscriptions, or any other payment feature &mdash; will result in immediate account suspension and forfeiture of pending earnings.</p>
+  <h3>A. Adult &amp; Sexual Content</h3>
+  <div class="box policy-box"><p>Pornographic, sexually explicit, or adult content of any kind is not permitted on ForkArt. The use of any platform monetization feature &mdash; including tips, fan subscriptions, or payouts &mdash; in connection with adult content or adult services is strictly prohibited.</p></div>
+  <h3>B. Copyright &amp; Intellectual Property Infringement</h3>
+  <div class="box policy-box"><p>Uploading, distributing, or monetizing content that infringes the copyrights, trademarks, or other intellectual property rights of any third party is prohibited. This includes unauthorized use of licensed artwork, music, characters, brand assets, or any content you do not have the right to share or commercialize.</p></div>
+  <h3>C. Violent Extremism</h3>
+  <div class="box policy-box"><p>Content that promotes, glorifies, incites, or finances terrorism, violent extremism, or hate-based violence is strictly prohibited. ForkArt will not process payments or distribute earnings connected to such content and will report credible threats to appropriate authorities.</p></div>
+  <div class="box warning-box"><p><strong>Enforcement:</strong> Violations of this policy will result in permanent account suspension, forfeiture of all pending earnings, removal of content, and referral to law enforcement where applicable. ForkArt reserves the right to determine what constitutes a violation at its sole discretion.</p></div>
+</section>
 
-        <h3>C. Violent Extremism</h3>
-        <div class="policy-box">
-            <p>Content that promotes, glorifies, incites, or finances terrorism, violent extremism, or hate-based violence is strictly prohibited. ForkArt will not process payments or distribute earnings connected to such content and will report credible threats to appropriate authorities.</p>
-        </div>
+<section>
+  <h2>Content Removal</h2>
+  <p>ForkArt may remove or disable access to content if it violates these Terms, our Community Guidelines, or applicable law, or if we receive a valid legal complaint.</p>
+  <p>Content removal does not affect ownership rights retained by the original creator.</p>
+</section>
 
-        <div class="warning-box">
-            <p><strong>Enforcement:</strong> Violations of this policy will result in permanent account suspension, forfeiture of all pending earnings, removal of content, and referral to law enforcement where applicable. ForkArt reserves the right to determine what constitutes a violation at its sole discretion.</p>
-        </div>
-    </section>
+<section>
+  <h2>Account Termination</h2>
+  <p>You may delete your account at any time through the App settings.</p>
+  <p>We may suspend or terminate access if you violate these Terms or misuse the App.</p>
+</section>
 
-    <section>
-        <h2>Content Removal</h2>
-        <p>ForkArt may remove or disable access to content if it violates these Terms, our Community Guidelines, or applicable law, or if we receive a valid legal complaint.</p>
-        <p>Content removal does not affect ownership rights retained by the original creator.</p>
-    </section>
+<section>
+  <h2>Payments &amp; Monetization</h2>
+  <h3>A. Tipping</h3>
+  <p>ForkArt allows users to tip artists directly on creative works they enjoy. Tips are a voluntary expression of appreciation and are <strong>non-refundable</strong>. A platform fee of 2&ndash;3% is deducted from each tip to support platform operations. The remainder is distributed automatically to the artist and contributors in the creative lineage chain via Stripe.</p>
+  <h3>B. Collaborative Lineage Splits</h3>
+  <div class="box policy-box"><p>ForkArt's collaborative pay system automatically distributes a portion of tips to artists whose work contributed to a piece through the remix chain. Split percentages are calculated based on the lineage structure at the time of the tip. All splits are visible to contributors. ForkArt is not responsible for disputes between contributors regarding split percentages.</p></div>
+  <h3>C. Payouts</h3>
+  <p>Artist payouts are processed via Stripe Connect. To receive earnings you must create or connect a Stripe account. Payouts are issued once a minimum threshold of $25 has been reached. ForkArt is not responsible for delays caused by Stripe or banking institutions.</p>
+  <h3>D. Artist Subscription Tool <span style="font-size:0.8em;color:var(--slate);font-weight:normal;">(Coming Soon)</span></h3>
+  <p>Artists may opt into a monthly subscription tier ($5&ndash;10/month) to unlock fan supporter features. This fee covers access to platform tools only &mdash; fan subscription payments go directly to the artist minus standard payment processing fees. ForkArt does not take a percentage of fan subscription income.</p>
+  <h3>E. Chargebacks &amp; Disputes</h3>
+  <div class="box important-box"><p>In the event of a disputed or charged-back payment, ForkArt reserves the right to withhold or offset future payouts to recover disputed amounts. Repeated disputed transactions may result in account suspension and forfeiture of pending earnings.</p></div>
+  <h3>F. Fraud &amp; Abuse</h3>
+  <div class="box warning-box"><p>Self-tipping, coordinated tip manipulation, sock puppet accounts, and any attempt to artificially generate platform payouts are strictly prohibited and will result in permanent account suspension and forfeiture of all pending earnings.</p></div>
+  <h3>G. Payment Processing</h3>
+  <p>All payments are processed securely by Stripe. ForkArt does not store credit card or banking information. By making a payment on ForkArt you agree to <a href="https://stripe.com/legal/ssa" target="_blank">Stripe's Terms of Service</a>.</p>
+  <h3>H. Taxes</h3>
+  <p>Artists are solely responsible for reporting and paying applicable taxes on earnings received through ForkArt. ForkArt will issue tax documentation as required by law (e.g. 1099 forms for US-based creators earning over $600/year).</p>
+</section>
 
-    <section>
-        <h2>Account Termination</h2>
-        <p>You may delete your account at any time through the App settings.</p>
-        <p>We may suspend or terminate access if you violate these Terms or misuse the App.</p>
-    </section>
+<section>
+  <h2>Privacy</h2>
+  <p>Your use of ForkArt is also governed by our <a href="https://forkart.app/privacy.html">Privacy Policy</a>, which explains what information we collect, how we use it, and who we share it with. By using the App, you also agree to the practices described in the Privacy Policy.</p>
+</section>
 
-     <section>
-        <h2>Payments & Monetization</h2>
- 
-        <h3>A. Tipping</h3>
-        <p>ForkArt allows users to tip artists directly on creative works they enjoy. Tips are a voluntary expression of appreciation and are <strong>non-refundable</strong>. A platform fee of 2–3% is deducted from each tip to support platform operations. The remainder is distributed automatically to the artist and contributors in the creative lineage chain via Stripe.</p>
- 
-        <h3>B. Collaborative Lineage Splits</h3>
-        <div class="policy-box">
-            <p>ForkArt's collaborative pay system automatically distributes a portion of tips to artists whose work contributed to a piece through the remix chain. Split percentages are calculated based on the lineage structure at the time of the tip. All splits are visible to contributors. ForkArt is not responsible for disputes between contributors regarding split percentages.</p>
-        </div>
- 
-        <h3>C. Payouts</h3>
-        <p>Artist payouts are processed via Stripe Connect. To receive earnings you must create or connect a Stripe account. Payouts are issued once a minimum threshold of $25 has been reached. ForkArt is not responsible for delays caused by Stripe or banking institutions.</p>
- 
-        <h3>D. Artist Subscription Tool <span style="font-size: 0.8em; color: #999; font-weight: normal;">(Coming Soon)</span></h3>
-        <p>Artists may opt into a monthly subscription tier ($5–10/month) to unlock fan supporter features. This fee covers access to platform tools only — fan subscription payments go directly to the artist minus standard payment processing fees. ForkArt does not take a percentage of fan subscription income.</p>
- 
-        <h3>E. Chargebacks & Disputes</h3>
-        <div class="important-box">
-            <p>In the event of a disputed or charged-back payment, ForkArt reserves the right to withhold or offset future payouts to recover disputed amounts. Repeated disputed transactions may result in account suspension and forfeiture of pending earnings.</p>
-        </div>
- 
-        <h3>F. Fraud & Abuse</h3>
-        <div class="warning-box">
-            <p>Self-tipping, coordinated tip manipulation, sock puppet accounts, and any attempt to artificially generate platform payouts are strictly prohibited and will result in permanent account suspension and forfeiture of all pending earnings.</p>
-        </div>
- 
-        <h3>G. Payment Processing</h3>
-        <p>All payments are processed securely by Stripe. ForkArt does not store credit card or banking information. By making a payment on ForkArt you agree to <a href="https://stripe.com/legal/ssa" target="_blank">Stripe's Terms of Service</a>.</p>
- 
-        <h3>H. Taxes</h3>
-        <p>Artists are solely responsible for reporting and paying applicable taxes on earnings received through ForkArt. ForkArt will issue tax documentation as required by law (e.g. 1099 forms for US-based creators earning over $600/year).</p>
-    </section>
+<section>
+  <h2>Disclaimer</h2>
+  <p>ForkArt is provided "as is" and "as available". We do not guarantee uninterrupted or error-free operation.</p>
+</section>
 
-    <section>
-        <h2>Privacy</h2>
-        <p>Your use of ForkArt is also governed by our <a href="https://forkart.app/privacy.html">Privacy Policy</a>, which explains what information we collect, how we use it, and who we share it with. By using the App, you also agree to the practices described in the Privacy Policy.</p>
-    </section>
+<section>
+  <h2>Limitation of Liability</h2>
+  <p>To the maximum extent permitted by law, ForkArt will not be liable for indirect, incidental, or consequential damages arising from your use of the App, including any loss of earnings or disputes between creators regarding lineage splits or payouts.</p>
+</section>
 
-    <section>
-        <h2>Disclaimer</h2>
-        <p>ForkArt is provided "as is" and "as available". We do not guarantee uninterrupted or error-free operation.</p>
-    </section>
+<section>
+  <h2>Changes to These Terms</h2>
+  <p>We may update these Terms from time to time. Continued use of the App means you accept the updated Terms.</p>
+  <p>We will notify users of significant changes through the App or via email.</p>
+</section>
 
-    <section>
-        <h2>Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, ForkArt will not be liable for indirect, incidental, or consequential damages arising from your use of the App, including any loss of earnings or disputes between creators regarding lineage splits or payouts.</p>
-    </section>
+</div>
 
-    <section>
-        <h2>Changes to These Terms</h2>
-        <p>We may update these Terms from time to time. Continued use of the App means you accept the updated Terms.</p>
-        <p>We will notify users of significant changes through the App or via email.</p>
-    </section>
+<div class="contact-box">
+  <h2 class="serif">Contact</h2>
+  <p>For questions about these Terms or the App:</p>
+  <p style="font-size:1.2em;margin-top:14px;"><a href="mailto:forkartapp@gmail.com">forkartapp@gmail.com</a></p>
+</div>
 
-    <div class="contact-box">
-        <h2 style="color: white; border: none; margin-bottom: 15px;">Contact</h2>
-        <p>For questions about these Terms or the App:</p>
-        <p style="font-size: 1.3em; margin: 15px 0;">
-            📧 <a href="mailto:forkartapp@gmail.com">forkartapp@gmail.com</a>
-        </p>
-    </div>
+<div class="foot-actions">
+  <a href="/index.html" class="back-link">&larr; Back to ForkArt Home</a>
+</div>
 
-    <footer>
-        <p>© 2026 ForkArt. All rights reserved.</p>
-        <p>These Terms of Service are effective as of the "Last updated" date shown above.</p>
-    </footer>
+<footer>
+  <p>&copy; 2026 ForkArt. All rights reserved.</p>
+  <p>These Terms of Service are effective as of the "Last updated" date shown above.</p>
+</footer>
 </body>
 </html>
