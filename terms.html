@@ -152,7 +152,7 @@
 <body>
     <header>
         <h1>📜 Terms of Service</h1>
-        <p class="last-updated">Last updated: <span class="update-date">June 15, 2026</span></p>
+        <p class="last-updated">Last updated: <span class="update-date">June 20, 2026</span></p>
         <a href="/index.html" class="back-link">← Back to ForkArt Home</a>
     </header>
 
@@ -271,7 +271,7 @@
         <p>ForkArt allows users to tip artists directly on creative works they enjoy. Tips are a voluntary expression of appreciation and are <strong>non-refundable</strong>. A platform fee of 2–3% is deducted from each tip to support platform operations. The remainder is distributed automatically to the artist and contributors in the creative lineage chain via Stripe.</p>
  
         <h3>B. Collaborative Lineage Splits</h3>
-        <div class="money-box">
+        <div class="policy-box">
             <p>ForkArt's collaborative pay system automatically distributes a portion of tips to artists whose work contributed to a piece through the remix chain. Split percentages are calculated based on the lineage structure at the time of the tip. All splits are visible to contributors. ForkArt is not responsible for disputes between contributors regarding split percentages.</p>
         </div>
  
@@ -296,6 +296,11 @@
  
         <h3>H. Taxes</h3>
         <p>Artists are solely responsible for reporting and paying applicable taxes on earnings received through ForkArt. ForkArt will issue tax documentation as required by law (e.g. 1099 forms for US-based creators earning over $600/year).</p>
+    </section>
+
+    <section>
+        <h2>Privacy</h2>
+        <p>Your use of ForkArt is also governed by our <a href="https://forkart.app/privacy.html">Privacy Policy</a>, which explains what information we collect, how we use it, and who we share it with. By using the App, you also agree to the practices described in the Privacy Policy.</p>
     </section>
 
     <section>
@@ -326,17 +331,5 @@
         <p>© 2026 ForkArt. All rights reserved.</p>
         <p>These Terms of Service are effective as of the "Last updated" date shown above.</p>
     </footer>
-
-    <script>
-        // Update the date automatically
-        document.addEventListener('DOMContentLoaded', function() {
-            const updateDate = document.querySelector('.update-date');
-            if (updateDate && updateDate.textContent.includes('Insert date')) {
-                const today = new Date();
-                const options = { year: 'numeric', month: 'long', day: 'numeric' };
-                updateDate.textContent = today.toLocaleDateString('en-US', options);
-            }
-        });
-    </script>
 </body>
 </html>
